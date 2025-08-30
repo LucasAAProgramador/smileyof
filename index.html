@@ -9,8 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <style>
+</head>
+
+ <style>
         /* Reset e Variáveis */
+  
         :root {
             --primary: #6c63ff;
             --primary-dark: #564fd8;
@@ -34,27 +37,6 @@
             color: var(--dark);
             overflow-x: hidden;
             line-height: 1.6;
-            font-size: 16px; /* Tamanho de fonte base aumentado */
-        }
-
-        /* Melhorias de acessibilidade */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* Foco visível para elementos interativos */
-        a:focus, button:focus, .btn:focus, .portfolio-btn:focus,
-        .filter-btn:focus, .contact-btn:focus, .contact-main-btn:focus {
-            outline: 3px solid var(--primary);
-            outline-offset: 3px;
         }
 
         /* Layout Geral */
@@ -93,7 +75,7 @@
 
         .btn {
             display: inline-block;
-            padding: 16px 32px; /* Aumentado para melhor toque */
+            padding: 12px 28px;
             background: linear-gradient(to right, var(--primary), var(--primary-dark));
             color: var(--white);
             border: none;
@@ -103,11 +85,9 @@
             transition: var(--transition);
             text-decoration: none;
             box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-            min-height: 50px; /* Altura mínima para toque */
-            font-size: 1rem;
         }
 
-        .btn:hover, .btn:focus {
+        .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
         }
@@ -118,7 +98,7 @@
             color: var(--primary);
         }
 
-        .btn-secondary:hover, .btn-secondary:focus {
+        .btn-secondary:hover {
             background: var(--primary);
             color: var(--white);
         }
@@ -182,10 +162,9 @@
             font-size: 1.1rem;
             position: relative;
             transition: var(--transition);
-            padding: 8px 0; /* Mais área de toque */
         }
 
-        .nav-links a:hover, .nav-links a:focus {
+        .nav-links a:hover {
             color: var(--primary);
         }
 
@@ -200,14 +179,13 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover:after, .nav-links a:focus:after {
+        .nav-links a:hover:after {
             width: 100%;
         }
 
         .burger {
             display: none;
             cursor: pointer;
-            padding: 10px; /* Área de toque maior */
         }
 
         .burger div {
@@ -274,7 +252,6 @@
             font-weight: 600;
             color: var(--primary);
             animation: pulse 2s infinite;
-            font-size: 0.9rem;
         }
 
         .animated-text {
@@ -322,7 +299,6 @@
             flex-direction: column;
             align-items: center;
             cursor: pointer;
-            padding: 15px; /* Área de toque maior */
         }
 
         .scroll-down span {
@@ -368,7 +344,6 @@
         .about-text p {
             margin-bottom: 25px;
             color: var(--gray);
-            line-height: 1.7; /* Melhor legibilidade */
         }
 
         .skills {
@@ -405,7 +380,7 @@
         }
 
         .skill-progress {
-            height: 12px; /* Mais espesso para melhor visibilidade */
+            height: 8px;
             background: #e0e0e0;
             border-radius: 10px;
             overflow: hidden;
@@ -437,7 +412,7 @@
             transition: var(--transition);
         }
 
-        .about-card:hover, .about-card:focus {
+        .about-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
@@ -456,7 +431,6 @@
         .about-card p {
             color: var(--gray);
             font-size: 0.9rem;
-            line-height: 1.6;
         }
 
         /* Services Section */
@@ -469,7 +443,6 @@
             max-width: 700px;
             margin: 0 auto 50px;
             color: var(--gray);
-            line-height: 1.7;
         }
 
         .services-container {
@@ -500,12 +473,12 @@
             transition: height 0.5s ease;
         }
 
-        .service-card:hover, .service-card:focus {
+        .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .service-card:hover:before, .service-card:focus:before {
+        .service-card:hover:before {
             height: 100%;
         }
 
@@ -524,7 +497,6 @@
         .service-card p {
             color: var(--gray);
             margin-bottom: 20px;
-            line-height: 1.6;
         }
 
         .service-features {
@@ -538,7 +510,6 @@
             display: flex;
             align-items: center;
             color: var(--gray);
-            line-height: 1.5;
         }
 
         .service-features li i {
@@ -561,18 +532,16 @@
         }
 
         .filter-btn {
-            padding: 12px 24px; /* Maior para toque */
+            padding: 8px 20px;
             background: var(--light);
             border: none;
             border-radius: 30px;
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
-            min-height: 44px; /* Altura mínima acessível */
-            font-size: 1rem;
         }
 
-        .filter-btn.active, .filter-btn:hover, .filter-btn:focus {
+        .filter-btn.active, .filter-btn:hover {
             background: var(--primary);
             color: var(--white);
         }
@@ -593,7 +562,7 @@
             height: 250px;
         }
 
-        .portfolio-item:hover, .portfolio-item:focus {
+        .portfolio-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
@@ -605,7 +574,7 @@
             transition: transform 0.5s ease;
         }
 
-        .portfolio-item:hover .portfolio-img, .portfolio-item:focus .portfolio-img {
+        .portfolio-item:hover .portfolio-img {
             transform: scale(1.1);
         }
 
@@ -626,7 +595,7 @@
             text-align: center;
         }
 
-        .portfolio-item:hover .portfolio-overlay, .portfolio-item:focus .portfolio-overlay {
+        .portfolio-item:hover .portfolio-overlay {
             opacity: 1;
         }
 
@@ -639,7 +608,6 @@
         .portfolio-overlay p {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 20px;
-            line-height: 1.5;
         }
 
         .portfolio-actions {
@@ -648,8 +616,8 @@
         }
 
         .portfolio-btn {
-            width: 50px; /* Aumentado para toque */
-            height: 50px; /* Aumentado para toque */
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: var(--white);
             color: var(--primary);
@@ -657,10 +625,9 @@
             justify-content: center;
             align-items: center;
             transition: var(--transition);
-            font-size: 1.2rem;
         }
 
-        .portfolio-btn:hover, .portfolio-btn:focus {
+        .portfolio-btn:hover {
             transform: translateY(-3px);
             background: var(--primary);
             color: var(--white);
@@ -687,7 +654,6 @@
             margin: 0 auto 40px;
             font-size: 1.1rem;
             opacity: 0.9;
-            line-height: 1.7;
         }
 
         .social-container {
@@ -708,7 +674,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .social-card:hover, .social-card:focus {
+        .social-card:hover {
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.15);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -727,22 +693,20 @@
         .social-card p {
             margin-bottom: 20px;
             opacity: 0.9;
-            line-height: 1.6;
         }
 
         .social-link {
             display: inline-block;
-            padding: 12px 24px; /* Maior para toque */
+            padding: 10px 20px;
             background: var(--white);
             color: var(--primary);
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
-            min-height: 44px; /* Altura mínima acessível */
         }
 
-        .social-link:hover, .social-link:focus {
+        .social-link:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
@@ -807,7 +771,6 @@
         .footer-col p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 20px;
-            line-height: 1.6;
         }
 
         .footer-links {
@@ -822,11 +785,9 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
-            padding: 4px 0; /* Mais área de toque */
-            display: inline-block;
         }
 
-        .footer-links a:hover, .footer-links a:focus {
+        .footer-links a:hover {
             color: var(--primary);
             padding-left: 5px;
         }
@@ -838,8 +799,8 @@
         }
 
         .footer-social a {
-            width: 50px; /* Aumentado para toque */
-            height: 50px; /* Aumentado para toque */
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             color: var(--white);
@@ -847,10 +808,9 @@
             justify-content: center;
             align-items: center;
             transition: var(--transition);
-            font-size: 1.2rem;
         }
 
-        .footer-social a:hover, .footer-social a:focus {
+        .footer-social a:hover {
             background: var(--primary);
             transform: translateY(-3px);
         }
@@ -889,7 +849,7 @@
             z-index: 1001;
         }
 
-        .contact-main-btn:hover, .contact-main-btn:focus {
+        .contact-main-btn:hover {
             transform: scale(1.1) rotate(15deg);
             box-shadow: 0 8px 25px rgba(108, 99, 255, 0.6);
         }
@@ -944,7 +904,7 @@
             background: #333;
         }
 
-        .contact-btn:hover, .contact-btn:focus {
+        .contact-btn:hover {
             transform: translateY(-5px) scale(1.1);
         }
 
@@ -975,46 +935,9 @@
             visibility: visible;
         }
 
-        .back-to-top:hover, .back-to-top:focus {
+        .back-to-top:hover {
             background: var(--primary-dark);
             transform: translateY(-5px);
-        }
-
-        /* Modal de Portfólio Acessível */
-        #portfolio-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-        }
-
-        #close-modal {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 2.5rem;
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-        }
-
-        #modal-img, #modal-video {
-            max-width: 90vw;
-            max-height: 80vh;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
         }
 
         /* Animations */
@@ -1070,7 +993,7 @@
             }
         }
 
-        /* Responsive Styles - Melhorias para mobile */
+        /* Responsive Styles */
         @media (max-width: 992px) {
             .about-container {
                 flex-direction: column;
@@ -1087,10 +1010,6 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                font-size: 16px; /* Tamanho de fonte garantido para mobile */
-            }
-            
             .nav-links {
                 position: fixed;
                 top: 80px;
@@ -1102,7 +1021,6 @@
                 align-items: center;
                 justify-content: center;
                 transition: var(--transition);
-                padding: 20px;
             }
             
             .nav-links.active {
@@ -1110,12 +1028,7 @@
             }
             
             .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .nav-links a {
-                font-size: 1.2rem;
-                padding: 12px;
+                margin: 20px 0;
             }
             
             .burger {
@@ -1138,8 +1051,6 @@
                 flex-direction: column;
                 text-align: center;
                 padding-top: 100px;
-                height: auto;
-                min-height: 100vh;
             }
             
             .hero-content {
@@ -1148,11 +1059,6 @@
             
             .hero-buttons {
                 justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .hero-buttons .btn {
-                margin-bottom: 10px;
             }
             
             .about-cards {
@@ -1169,34 +1075,15 @@
             }
             
             .contact-main-btn {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-            }
-            
-            .contact-btn {
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
             }
-
-            /* Melhorias de texto para mobile */
-            h2 {
-                font-size: 2rem;
-            }
             
-            .animated-text {
-                font-size: 2rem;
-                line-height: 1.3;
-            }
-            
-            .typing-text {
-                font-size: 1.2rem;
-            }
-            
-            .services-intro, .social-intro {
+            .contact-btn {
+                width: 40px;
+                height: 40px;
                 font-size: 1rem;
-                padding: 0 10px;
             }
         }
 
@@ -1206,11 +1093,11 @@
             }
             
             h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .animated-text {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .portfolio-grid {
@@ -1226,138 +1113,73 @@
                 width: 100%;
                 max-width: 300px;
             }
-            
-            .hero-badge {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin-bottom: 20px;
-                display: inline-block;
-            }
-            
-            .image-container {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .btn {
-                padding: 14px 28px;
-                font-size: 0.9rem;
-            }
-            
-            .filter-btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Melhorias de alto contraste para acessibilidade */
-        @media (prefers-contrast: high) {
-            :root {
-                --primary: #0000FF;
-                --primary-dark: #00008B;
-                --secondary: #FF0000;
-                --dark: #000000;
-                --light: #FFFFFF;
-                --gray: #333333;
-            }
-            
-            .skill-progress {
-                border: 1px solid var(--dark);
-            }
-        }
-
-        /* Redução de movimento para quem prefere */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            
-            .image-container {
-                animation: none;
-            }
-            
-            .scroll-down span {
-                animation: none;
-                opacity: 0.7;
-            }
-            
-            .hero-badge {
-                animation: none;
-            }
         }
     </style>
-</head>
 
 <body>
-    <!-- Header com navegação acessível -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
+                <!-- Substitua pelo caminho da sua logo -->
                 <img src="assets/img/FAUSTINO HAMBURGUERIA (1).png" alt="Lucas Alencar" class="logo-img">
                 <div class="logo-text">Lucas<span>Alencar</span></div>
             </div>
             
-            <nav aria-label="Navegação principal">
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#social">Redes Sociais</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#social">Redes Sociais</a></li>
+            </ul>
             
-            <div class="burger" aria-label="Abrir menu" role="button" aria-expanded="false" tabindex="0">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section com texto alternativo para imagem -->
-    <section id="home" class="hero" aria-label="Apresentação pessoal">
-        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-            <div class="hero-badge">Disponível para projetos</div>
-            
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
             <div class="hero-content">
-                <h1 class="animated-text">Olá, eu sou <span>Lucas Alencar</span></h1>
+                <div class="hero-badge">Disponível para projetos</div>
+                <h1 class="animated-text">Transformando ideias em <span>realidade digital</span></h1>
                 <div class="typing-text" id="typing-text"></div>
-                
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn">Ver Portfólio</a>
-                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                    <a href="#portfolio" class="btn">Ver Trabalhos</a>
+                    <a href="#social" class="btn btn-secondary">Me Siga</a>
                 </div>
             </div>
             
             <div class="hero-image">
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Lucas Alencar - Designer e Desenvolvedor">
+                    <!-- Substitua pelo caminho da sua imagem -->
+                    <img src="assets/img/lucas.png" alt="Lucas Alencar">
                 </div>
             </div>
-            
-            <div class="scroll-down" aria-label="Rolar para a próxima seção">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </section>
 
-    <!-- About Section com estrutura semântica aprimorada -->
-    <section id="about" class="about" aria-labelledby="about-heading">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 id="about-heading">Sobre <span>Mim</span></h2>
+            <h2>Sobre <span>Mim</span></h2>
             
             <div class="about-container">
                 <div class="about-text">
-                    <h3>Designer & Desenvolvedor Front-end</h3>
-                    <p>Sou um profissional apaixonado por criar experiências digitais incríveis e funcionais. Com formação em Design e especialização em Desenvolvimento Front-end, combino o melhor dos dois mundos para entregar soluções que não apenas impressionam visualmente, mas também oferecem uma experiência de usuário excepcional.</p>
-                    <p>Minha jornada começou há mais de 5 anos, e desde então tenho me dedicado a aprimorar minhas habilidades e acompanhar as últimas tendências e tecnologias do mercado.</p>
+                    <h3>Designer & Desenvolvedor com Paixão por Criatividade</h3>
+                    <p>Sou um profissional dedicado à criação de experiências digitais excepcionais. Com formação em Design e especialização em desenvolvimento front-end, combino o melhor dos dois mundos para entregar projetos visualmente impressionantes e tecnicamente sólidos.</p>
+                    <p>Minha abordagem combina atenção aos detalhes, pensamento estratégico e paixão por inovação, sempre buscando superar as expectativas dos clientes.</p>
                     
                     <div class="skills">
                         <h4>Minhas Habilidades</h4>
@@ -1365,7 +1187,7 @@
                         <div class="skill-bars">
                             <div class="skill-bar">
                                 <div class="skill-info">
-                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-name">Designer Grafico</span>
                                     <span class="skill-percent">95%</span>
                                 </div>
                                 <div class="skill-progress">
@@ -1375,7 +1197,7 @@
                             
                             <div class="skill-bar">
                                 <div class="skill-info">
-                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-name">Desenvolvimento Front-end</span>
                                     <span class="skill-percent">90%</span>
                                 </div>
                                 <div class="skill-progress">
@@ -1385,21 +1207,11 @@
                             
                             <div class="skill-bar">
                                 <div class="skill-info">
-                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-name">Edição de Vídeo</span>
                                     <span class="skill-percent">85%</span>
                                 </div>
                                 <div class="skill-progress">
                                     <span data-width="85%"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-bar">
-                                <div class="skill-info">
-                                    <span class="skill-name">React</span>
-                                    <span class="skill-percent">80%</span>
-                                </div>
-                                <div class="skill-progress">
-                                    <span data-width="80%"></span>
                                 </div>
                             </div>
                         </div>
@@ -1408,200 +1220,175 @@
                 
                 <div class="about-cards">
                     <div class="about-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Formação</h4>
-                        <p>Graduado em Design Gráfico com especialização em Desenvolvimento Front-end e UX/UI Design.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-medal"></i>
                         <h4>Experiência</h4>
-                        <p>Mais de 5 anos de experiência trabalhando com design e desenvolvimento para diversas empresas.</p>
+                        <p>Atuo com projetos autorais em design gráfico, edição de vídeo e desenvolvimento web. Busco sempre une estética moderna e praticidade, criando soluções criativas enquanto construo meu portfólio.</p>
                     </div>
                     
                     <div class="about-card">
                         <i class="fas fa-project-diagram"></i>
                         <h4>Projetos</h4>
-                        <p>Mais de 50 projetos entregues com sucesso para clientes nacionais e internacionais.</p>
+                        <p>Meu primeiro projeto é este próprio site, desenvolvido para apresentar meu estilo e forma de trabalho. Além disso, crio artes e páginas fictícias para diferentes áreas, explorando ideias e aprimorando minhas habilidades.</p>
                     </div>
                     
                     <div class="about-card">
-                        <i class="fas fa-award"></i>
-                        <h4>Prêmios</h4>
-                        <p>Vencedor de vários prêmios de design e reconhecimento por inovação em projetos web.</p>
+                        <i class="fas fa-users"></i>
+                        <h4>Clientes</h4>
+                        <p>Estou em fase de construção da minha base de clientes. Enquanto isso, produzo projetos autorais e versões de estudo, garantindo que cada novo cliente receba um trabalho criativo, profissional e de qualidade.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Inovação</h4>
+                        <p>Sempre buscando as melhores tecnologias e tendências do mercado.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section com descrições detalhadas -->
-    <section id="services" class="services" aria-labelledby="services-heading">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <h2 id="services-heading">Meus <span>Serviços</span></h2>
-            
-            <p class="services-intro">Ofereço soluções completas em design e desenvolvimento para ajudar sua empresa a crescer e se destacar no ambiente digital. Confira abaixo os principais serviços que ofereço:</p>
+            <h2>Meus <span>Serviços</span></h2>
+            <p class="services-intro">Ofereço soluções completas em design e desenvolvimento para impulsionar sua presença digital com criatividade e inovação.</p>
             
             <div class="services-container">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <i class="fas fa-paint-brush"></i>
                     </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Crio interfaces intuitivas e atraentes que proporcionam a melhor experiência para os usuários.</p>
-                    
+                    <h3>Designer Grafico</h3>
+                    <p>Crio designs modernos e criativos, unindo estética e estratégia para transmitir sua identidade com impacto.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Design responsivo e centrado no usuário</li>
-                        <li><i class="fas fa-check"></i> Prototipagem e teste de usabilidade</li>
-                        <li><i class="fas fa-check"></i> Design system e guias de estilo</li>
-                        <li><i class="fas fa-check"></i> Pesquisa de usuários e personas</li>
+                        <li><i class="fas fa-check"></i> Artes criativas com alto nível de detalhes</li>
+                        <li><i class="fas fa-check"></i> Maior personalização</li>
+                        <li><i class="fas fa-check"></i> Da forma que o cliente pedir</li>
+                        <li><i class="fas fa-check"></i> Variações de layout</li>
                     </ul>
-                    
-                    <a href="#contact" class="btn btn-secondary">Solicitar Orçamento</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Desenvolvimento Front-end</h3>
-                    <p>Desenvolvo websites e aplicações web modernas, rápidas e responsivas.</p>
-                    
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Desenvolvo sites e aplicações web modernas, rápidas e com as melhores práticas do mercado.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> HTML5, CSS3 e JavaScript ES6+</li>
-                        <li><i class="fas fa-check"></i> Frameworks modernos (React, Vue)</li>
-                        <li><i class="fas fa-check"></i> Animações e interações fluidas</li>
-                        <li><i class="fas fa-check"></i> Otimização de performance</li>
+                        <li><i class="fas fa-check"></i> Sites responsivos</li>
+                        <li><i class="fas fa-check"></i> Aplicações web</li>
+                        <li><i class="fas fa-check"></i> Personalização do site</li>
+                        <li><i class="fas fa-check"></i> Garantia de 3 meses</li>
                     </ul>
-                    
-                    <a href="#contact" class="btn btn-secondary">Solicitar Orçamento</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-film"></i>
                     </div>
-                    <h3>Design Responsivo</h3>
-                    <p>Garanto que seu site funcione perfeitamente em todos os dispositivos e tamanhos de tela.</p>
-                    
+                    <h3>Edição de Vídeo</h3>
+                    <p>Produzo e edito vídeos criativos que contam histórias e engajam seu público-alvo.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Layouts adaptáveis para mobile</li>
-                        <li><i class="fas fa-check"></i> Testes em múltiplos dispositivos</li>
-                        <li><i class="fas fa-check"></i> Melhorias de experiência mobile</li>
-                        <li><i class="fas fa-check"></i> Carregamento otimizado para mobile</li>
+                        <li><i class="fas fa-check"></i> Edição da maneira do cliente</li>
+                        <li><i class="fas fa-check"></i> Video Grande ou Curto</li>
+                        <li><i class="fas fa-check"></i> Correção de cor</li>
+                        <li><i class="fas fa-check"></i> Efeitos visuais</li>
                     </ul>
-                    
-                    <a href="#contact" class="btn btn-secondary">Solicitar Orçamento</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section com foco em acessibilidade -->
-    <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 id="portfolio-heading">Meu <span>Portfólio</span></h2>
+            <h2>Meu <span>Portfólio</span></h2>
             
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
-                <button class="filter-btn" data-filter="app">App Design</button>
-                <button class="filter-btn" data-filter="frontend">Front-end</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="development">Desenvolvimento</button>
+                <button class="filter-btn" data-filter="editing">Edição</button>
             </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Projeto de website para restaurante" class="portfolio-img">
+                <!-- Projeto 1 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="assets/img/rio.png" alt="Projeto Design 1" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>Website Restaurante</h3>
-                        <p>Design moderno e responsivo para um restaurante gourmet, com sistema de reservas online.</p>
+                        <h3>Redesign de App</h3>
+                        <p>Interface moderna e intuitiva para aplicativo mobile</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar projeto de restaurante">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código do projeto">
-                                <i class="fas fa-code"></i>
-                            </a>
+                            <a href="#" class="portfolio-btn"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="app">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Aplicativo de finanças pessoais" class="portfolio-img">
+                <!-- Projeto 2 -->
+                <div class="portfolio-item" data-category="development">
+                    <img src="assets/img/sab.png" alt="Projeto Desenvolvimento 1" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>App Finanças Pessoais</h3>
-                        <p>Aplicativo mobile para controle de finanças pessoais com dashboard intuitivo.</p>
+                        <h3>E-commerce Completo</h3>
+                        <p>Loja virtual com painel administrativo integrado</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar aplicativo de finanças">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código do aplicativo">
-                                <i class="fas fa-code"></i>
-                            </a>
+                            <a href="#" class="portfolio-btn"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="frontend">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="E-commerce completo" class="portfolio-img">
+                <!-- Modal de Imagem/Vídeo do Portfólio -->
+<div id="portfolio-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:2000;">
+    <span id="close-modal" style="position:absolute; top:30px; right:40px; color:#fff; font-size:2rem; cursor:pointer;">&times;</span>
+    <img id="modal-img" src="" alt="Projeto" style="max-width:90vw; max-height:80vh; border-radius:15px; box-shadow:0 10px 40px #0008; display:none;">
+    <video id="modal-video" controls style="max-width:90vw; max-height:80vh; border-radius:15px; box-shadow:0 10px 40px #0008; display:none;">
+        <source id="modal-video-src" src="" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+</div>
+
+<!-- Projeto 3 -->
+<div class="portfolio-item" data-category="editing">
+    <img src="assets/img/Texto do seu parágrafo (2).png" alt="Projeto Edição 1" class="portfolio-img">
+    <div class="portfolio-overlay">
+        <h3>Vídeo Editado</h3>
+        <p>Os vídeos editados estão disponíveis no meu perfil do Instagram: <b>@Smiley._of</b></p>
+        
+        
+    </div>
+</div>
+                
+                <!-- Projeto 4 -->
+                <div class="portfolio-item" data-category="design">
+                    <img src="assets/img/Dia mundial da bicicleta  post instagram marrom e branco.png" alt="Projeto Design 2" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>Loja Virtual</h3>
-                        <p>E-commerce completo com carrinho, checkout e integração com gateways de pagamento.</p>
+                        <h3>Identidade Visual</h3>
+                        <p>Desenvolvimento de marca completa</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar loja virtual">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código da loja">
-                                <i class="fas fa-code"></i>
-                            </a>
+                            <a href="#" class="portfolio-btn"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Website corporativo" class="portfolio-img">
+                <!-- Projeto 5 -->
+                <div class="portfolio-item" data-category="development">
+                    <img src="assets/img/Não esqueça o petisco do seu Amigo!.png" alt="Projeto Desenvolvimento 2" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>Site Corporativo</h3>
-                        <p>Website institucional para empresa de tecnologia com blog integrado.</p>
+                        <h3>Dashboard Analytics</h3>
+                        <p>Painel de métricas e visualização de dados</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar site corporativo">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código do site">
-                                <i class="fas fa-code"></i>
-                            </a>
+                            <a href="#" class="portfolio-btn"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="app">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1139&q=80" alt="App de delivery de comida" class="portfolio-img">
+                <!-- Projeto 6 -->
+                <div class="portfolio-item" data-category="editing">
+                    <img src="assets/img/portfolio/edit2.jpg" alt="Projeto Edição 2" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>App Delivery</h3>
-                        <p>Aplicativo de delivery de comida com acompanhamento em tempo real.</p>
+                        <h3>Série de Vídeos</h3>
+                        <p>Edição e pós-produção de conteúdo serial</p>
                         <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar aplicativo de delivery">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código do aplicativo">
-                                <i class="fas fa-code"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="frontend">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dashboard analítico" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Dashboard Analítico</h3>
-                        <p>Painel administrativo com gráficos interativos e relatórios personalizáveis.</p>
-                        <div class="portfolio-actions">
-                            <a href="#" class="portfolio-btn" aria-label="Visualizar dashboard">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="#" class="portfolio-btn" aria-label="Ver código do dashboard">
-                                <i class="fas fa-code"></i>
-                            </a>
+                            <a href="#" class="portfolio-btn"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1609,12 +1396,11 @@
         </div>
     </section>
 
-    <!-- Social Media Section com links acessíveis -->
-    <section id="social" class="social-media" aria-labelledby="social-heading">
+    <!-- Social Media Section -->
+    <section id="social" class="social-media">
         <div class="container">
-            <h2 id="social-heading">Minhas <span>Redes Sociais</span></h2>
-            
-            <p class="social-intro">Me acompanhe nas redes sociais para ficar por dentro dos meus trabalhos, dicas de design e desenvolvimento, e muito mais!</p>
+            <h2>Minhas <span>Redes Sociais</span></h2>
+            <p class="social-intro">Me siga nas redes sociais para acompanhar meus trabalhos, dicas e novidades do mundo do design e desenvolvimento.</p>
             
             <div class="social-container">
                 <div class="social-card whatsapp">
@@ -1622,8 +1408,8 @@
                         <i class="fab fa-whatsapp"></i>
                     </div>
                     <h3>WhatsApp</h3>
-                    <p>Entre em contato diretamente pelo WhatsApp para conversarmos sobre seu projeto.</p>
-                    <a href="https://wa.me/5511999999999" class="social-link" target="_blank" rel="noopener">Enviar Mensagem</a>
+                    <p>Entre em contato diretamente para orçamentos e conversas mais ágeis.</p>
+                    <a href="https://wa.me/5511953511114" class="social-link" target="_blank">Enviar Mensagem</a>
                 </div>
                 
                 <div class="social-card instagram">
@@ -1631,17 +1417,17 @@
                         <i class="fab fa-instagram"></i>
                     </div>
                     <h3>Instagram</h3>
-                    <p>Acompanhe meu dia a dia, processos criativos e novidades do mundo do design.</p>
-                    <a href="https://instagram.com/lucasalencar" class="social-link" target="_blank" rel="noopener">Seguir</a>
+                    <p>Acompanhe meu trabalho diário, stories e novidades no Instagram.</p>
+                    <a href="https://www.instagram.com/Smiley._of/" class="social-link" target="_blank">Seguir</a>
                 </div>
                 
                 <div class="social-card linkedin">
                     <div class="social-icon">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin-in"></i>
                     </div>
                     <h3>LinkedIn</h3>
-                    <p>Conecte-se comigo profissionalmente e veja minha trajetória e experiências.</p>
-                    <a href="https://linkedin.com/in/lucasalencar" class="social-link" target="_blank" rel="noopener">Conectar</a>
+                    <p>Conecte-se comigo profissionalmente e veja minha trajetória.</p>
+                    <a href="https://www.linkedin.com/in/lucasalencar1001/" class="social-link" target="_blank">Conectar</a>
                 </div>
                 
                 <div class="social-card github">
@@ -1649,26 +1435,28 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <h3>GitHub</h3>
-                    <p>Confira meus projetos de código aberto e contribuições para a comunidade.</p>
-                    <a href="https://github.com/lucasalencar" class="social-link" target="_blank" rel="noopener">Ver Projetos</a>
+                    <p>Confira meus projetos de desenvolvimento e contribuições.</p>
+                    <a href="https://github.com/LucasAAProgramador" class="social-link" target="_blank">Ver Projetos</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer com informações de contato -->
-    <footer id="contact">
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h4>Sobre Mim</h4>
-                    <p>Designer e Desenvolvedor Front-end apaixonado por criar experiências digitais incríveis e acessíveis para todos.</p>
-                    
+                    <div class="logo">
+                        <img src="assets/img/FAUSTINO HAMBURGUERIA (1).png" alt="Lucas Alencar" class="logo-img">
+                        <div class="logo-text">Lucas<span>Alencar</span></div>
+                    </div>
+                    <p>Transformando ideias em experiências digitais excepcionais através do design e desenvolvimento criativo.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/5511953511114" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/Smiley._of/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/lucasalencar1001/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/LucasAAProgramador" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
@@ -1679,370 +1467,237 @@
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#services">Serviços</a></li>
                         <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#social">Redes Sociais</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Serviços</h4>
                     <ul class="footer-links">
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Desenvolvimento Front-end</a></li>
-                        <li><a href="#">Design Responsivo</a></li>
-                        <li><a href="#">Consultoria</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> lucas@exemplo.com</li>
-                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                        <li><a href="#services">Designer Grafico</a></li>
+                        <li><a href="#services">Desenvolvimento Web</a></li>
+                        <li><a href="#services">Edição de Vídeo</a></li>
+                        <li><a href="#services">Motion Graphics</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Lucas Alencar. Todos os direitos reservados.</p>
+                <p>&copy; <?php echo date('Y'); ?> Lucas Alencar. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botão flutuante de contato acessível -->
+    <!-- Floating Contact Button -->
     <div class="contact-float">
-        <div class="contact-main-btn" id="contact-main-btn" aria-label="Abrir opções de contato" role="button" tabindex="0">
-            <i class="fas fa-comment-dots"></i>
-        </div>
-        
         <div class="contact-buttons" id="contact-buttons">
-            <a href="https://wa.me/5511999999999" class="contact-btn whatsapp" aria-label="Contato via WhatsApp">
+            <a href="https://wa.me/5511953511114" class="contact-btn whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://instagram.com/lucasalencar" class="contact-btn instagram" aria-label="Perfil no Instagram">
+            <a href="https://www.instagram.com/lucasalencar.design/" class="contact-btn instagram" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://linkedin.com/in/lucasalencar" class="contact-btn linkedin" aria-label="Perfil no LinkedIn">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/lucasalencar1001/" class="contact-btn linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/lucasalencar" class="contact-btn github" aria-label="Perfil no GitHub">
+            <a href="https://github.com/LucasAAProgramador" class="contact-btn github" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
+        <div class="contact-main-btn" id="contact-main-btn">
+            <i class="fas fa-comment-dots"></i>
+        </div>
     </div>
 
-    <!-- Botão de voltar ao topo -->
-    <div class="back-to-top" id="back-to-top" aria-label="Voltar ao topo" role="button" tabindex="0">
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Modal de portfólio acessível -->
-    <div id="portfolio-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
-        <span id="close-modal" aria-label="Fechar modal" role="button" tabindex="0">&times;</span>
-        <img id="modal-img" src="" alt="">
-        <video id="modal-video" controls style="display:none;"></video>
-    </div>
-
+   
+    
     <script>
-        // Menu mobile acessível
+       // Efeito de digitação
+       
+        const texts = [
+            "Designer & Desenvolvedor Front-end",
+            "Especialista em Edição de Vídeo",
+            "Criativo & Inovador"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingDelay = 100;
+        let erasingDelay = 50;
+        let newTextDelay = 2000;
+        let timer;
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                document.getElementById("typing-text").textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingDelay = erasingDelay;
+            } else {
+                document.getElementById("typing-text").textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingDelay = 100;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingDelay = newTextDelay;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex++;
+                if (textIndex === texts.length) textIndex = 0;
+                typingDelay = 500;
+            }
+            
+            setTimeout(typeEffect, typingDelay);
+        }
+
+        // Navegação responsiva
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
         const navLinks = document.querySelectorAll('.nav-links li');
-        
-        function toggleNav() {
-            // Toggle Nav
+
+        burger.addEventListener('click', () => {
             nav.classList.toggle('active');
+            burger.classList.toggle('active');
             
-            // Toggle aria-expanded
-            const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-            burger.setAttribute('aria-expanded', !isExpanded);
-            
-            // Animate Links
+            // Animação dos links
             navLinks.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
                 } else {
-                    link.style.animation = `fadeIn 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
                 }
             });
-            
-            // Burger Animation
-            burger.classList.toggle('active');
-        }
-        
-        burger.addEventListener('click', toggleNav);
-        burger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                toggleNav();
-            }
-        });
-        
-        // Fechar menu ao clicar em um link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                burger.classList.remove('active');
-                burger.setAttribute('aria-expanded', 'false');
-            });
-        });
-        
-        // Texto digitando
-        const typingText = document.getElementById('typing-text');
-        const phrases = ['Designer Gráfico', 'Desenvolvedor Front-end', 'UI/UX Designer'];
-        let phraseIndex = 0;
-        let letterIndex = 0;
-        let currentPhrase = '';
-        let isDeleting = false;
-        let isEnd = false;
-        
-        function type() {
-            isEnd = false;
-            
-            if (phraseIndex >= phrases.length) {
-                phraseIndex = 0;
-            }
-            
-            const fullPhrase = phrases[phraseIndex];
-            
-            if (isDeleting) {
-                currentPhrase = fullPhrase.substring(0, letterIndex - 1);
-                letterIndex--;
-            } else {
-                currentPhrase = fullPhrase.substring(0, letterIndex + 1);
-                letterIndex++;
-            }
-            
-            typingText.textContent = currentPhrase;
-            
-            let typeSpeed = 100;
-            
-            if (isDeleting) {
-                typeSpeed /= 2;
-            }
-            
-            if (!isDeleting && letterIndex === fullPhrase.length) {
-                isEnd = true;
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && letterIndex === 0) {
-                isDeleting = false;
-                phraseIndex++;
-                typeSpeed = 500;
-            }
-            
-            setTimeout(type, typeSpeed);
-        }
-        
-        // Iniciar efeito de digitação
-        setTimeout(type, 1000);
-        
-        // Animação de barras de habilidades
-        const skillBars = document.querySelectorAll('.skill-progress span');
-        
-        function animateSkills() {
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                bar.style.width = width;
-            });
-        }
-        
-        // Observer para animar habilidades quando entrarem na viewport
-        const skillsSection = document.querySelector('.skills');
-        
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkills();
-                    skillsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        if (skillsSection) {
-            skillsObserver.observe(skillsSection);
-        }
-        
-        // Filtro de portfólio
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remover active de todos os botões
-                filterBtns.forEach(btn => btn.classList.remove('active'));
                 
-                // Adicionar active ao botão clicado
-                btn.classList.add('active');
+                if (this.getAttribute('href') === '#') return;
                 
-                // Filtrar itens
-                const filter = btn.getAttribute('data-filter');
-                
-                portfolioItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fechar menu mobile após clique
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        burger.classList.remove('active');
                     }
-                });
+                }
             });
         });
-        
-        // Botão flutuante de contato
-        const contactMainBtn = document.getElementById('contact-main-btn');
-        const contactButtons = document.getElementById('contact-buttons');
-        
-        contactMainBtn.addEventListener('click', () => {
-            contactButtons.classList.toggle('active');
-        });
-        
-        contactMainBtn.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                contactButtons.classList.toggle('active');
-            }
-        });
-        
-        // Botão voltar ao topo
-        const backToTop = document.getElementById('back-to-top');
-        
+
+        // Header scroll effect
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
+            const header = document.querySelector('header');
+            const backToTop = document.getElementById('back-to-top');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
                 backToTop.classList.add('active');
             } else {
+                header.classList.remove('scrolled');
                 backToTop.classList.remove('active');
             }
         });
-        
-        backToTop.addEventListener('click', () => {
+
+        // Botão voltar ao topo
+        document.getElementById('back-to-top').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
-        backToTop.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+
+        // Botão flutuante de contato
+        document.getElementById('contact-main-btn').addEventListener('click', () => {
+            document.getElementById('contact-buttons').classList.toggle('active');
+        });
+
+        // Filtro do portfólio
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover classe active de todos os botões
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Adicionar classe active ao botão clicado
+                button.classList.add('active');
+                
+                // Obter o filtro
+                const filter = button.getAttribute('data-filter');
+                
+                // Filtrar itens
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
-            }
-        });
-        
-        // Header scroll
-        const header = document.querySelector('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Scroll suave para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
             });
         });
-        
-        // Modal de portfólio
-        const portfolioItemsArray = document.querySelectorAll('.portfolio-item');
-        const portfolioModal = document.getElementById('portfolio-modal');
-        const closeModal = document.getElementById('close-modal');
-        const modalImg = document.getElementById('modal-img');
-        const modalVideo = document.getElementById('modal-video');
-        
-        portfolioItemsArray.forEach(item => {
-            item.addEventListener('click', () => {
-                const imgSrc = item.querySelector('img').src;
-                modalImg.src = imgSrc;
-                modalImg.style.display = 'block';
-                modalVideo.style.display = 'none';
-                portfolioModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-            
-            // Tornar itens do portfólio focáveis com teclado
-            item.setAttribute('tabindex', '0');
-            
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const imgSrc = item.querySelector('img').src;
-                    modalImg.src = imgSrc;
-                    modalImg.style.display = 'block';
-                    modalVideo.style.display = 'none';
-                    portfolioModal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                }
-            });
-        });
-        
-        closeModal.addEventListener('click', () => {
-            portfolioModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-        
-        closeModal.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                portfolioModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Fechar modal clicando fora
-        portfolioModal.addEventListener('click', (e) => {
-            if (e.target === portfolioModal) {
-                portfolioModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Inicializar animações quando a página carrega
-        window.addEventListener('DOMContentLoaded', () => {
-            // Header scroll inicial
-            if (window.pageYOffset > 50) {
-                header.classList.add('scrolled');
-            }
-            
-            // Focar no conteúdo principal para usuários de leitor de tela
-            const mainContent = document.querySelector('main');
-            if (mainContent) {
-                mainContent.setAttribute('tabindex', '-1');
-                mainContent.focus();
-            }
-        });
-        
-        // Melhorar acessibilidade do menu mobile
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && nav.classList.contains('active')) {
-                toggleNav();
-            }
-        });
+
+         
+// Modal do Portfólio
+const modal = document.getElementById('portfolio-modal');
+const modalImg = document.getElementById('modal-img');
+const modalVideo = document.getElementById('modal-video');
+const modalVideoSrc = document.getElementById('modal-video-src');
+const closeModal = document.getElementById('close-modal');
+document.querySelectorAll('.portfolio-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const videoSrc = this.getAttribute('data-video');
+        if (videoSrc) {
+            modalImg.style.display = 'none';
+            modalVideo.style.display = 'block';
+            modalVideoSrc.src = videoSrc;
+            modalVideo.load();
+        } else {
+            const img = this.closest('.portfolio-item').querySelector('.portfolio-img');
+            modalVideo.style.display = 'none';
+            modalImg.style.display = 'block';
+            modalImg.src = img.src;
+        }
+        modal.style.display = 'flex';
+    });
+});
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImg.src = '';
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modalVideoSrc.src = '';
+});
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        modalImg.src = '';
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        modalVideoSrc.src = '';
+    }
+});
+
+
+
     </script>
+
 </body>
 </html>
